@@ -1,0 +1,41 @@
+<!--
+  Generated template for the Add page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add weather</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="dismiss()" color="royal" icon-only>
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>{{this.globalServices.lableNamesObj.city}}</ion-label>
+      <ion-input type="text" [(ngModel)]="data.city" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{this.globalServices.lableNamesObj.country}}</ion-label>
+      <ion-select [(ngModel)]="data.country">
+        <ion-option value="us">United States</ion-option>
+        <ion-option value="uk">United Kingdom</ion-option>
+      </ion-select>
+
+    </ion-item>
+
+  </ion-list>
+  <div padding>
+    <button ion-button block (click)="dismiss(data)" color="royal">Add Weather</button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <!--<ion-buttons start>-->
+      <!--<button royal (click)="addWeather()">Add</button>-->
+    <!--</ion-buttons>-->
+
+    <ion-title>Buttons In Components</ion-title>
+    <ion-buttons left>
+      <button ion-button color="royal" solid (click)="addWeather()">Add</button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  {{this.globalServices.weatherList | json}}
+</ion-content>
