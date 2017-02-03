@@ -1,6 +1,6 @@
 import { Component, Input,Output, EventEmitter } from '@angular/core';
 import {GlobalServices} from '../../providers/global-services';
-import {TemperaturePipe} from '../../pipes/temperature';
+// import {TemperaturePipe} from '../../pipes/temperature';
 
 
 /*

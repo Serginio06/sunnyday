@@ -4,10 +4,10 @@ import {NavController, ModalController} from 'ionic-angular';
 import  {AddPage} from '../add/add';
 import {GlobalServices} from '../../providers/global-services';
 import {Weather} from '../../providers/weather';
-import {Observable} from 'rxjs/Observable';
-import {TemperaturePipe} from '../../pipes/temperature';
+// import {Observable} from 'rxjs/Observable';
+// import {TemperaturePipe} from '../../pipes/temperature';
 import {ForecastPage} from '../forecast/forecast';
-import {WeatherComponent} from '../../components/weather/weather';
+// import {WeatherComponent} from '../../components/weather/weather';
 import {StorageService} from '../../providers/storage'
 
 @Component({

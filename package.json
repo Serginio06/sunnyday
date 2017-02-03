@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^1.0.0",
+    "sw-toolbox": "^3.4.0",
     "typescript": "2.0.9"
   },
   "cordovaPlugins": [
@@ -47,5 +48,5 @@
       "locator": "ios"
     }
   ],
-  "description": "SunnyDay: An Ionic project"
+  "description": "SunnyDay: simple weather app"
 }
