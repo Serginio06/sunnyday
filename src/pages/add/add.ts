@@ -16,13 +16,16 @@ import {GlobalServices} from "../../providers/global-services"
 export class AddPage {
 
   public data = {
-    country: "uk",
-    city: "London"
+    country: "ua",
+    city: "Kiev"
   };
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private viewCtrl:ViewController, private globalServices:GlobalServices) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public viewCtrl:ViewController,
+              public globalServices:GlobalServices) {
 
 
 

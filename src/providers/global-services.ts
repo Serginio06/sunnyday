@@ -18,6 +18,19 @@ export class GlobalServices {
   public btnNamesObj: Object = {};
   public userMsgObj: Object = {};
   public weatherList = [];
+  public countryList = [
+    {code: "us", name: "Unites States"},
+    {code: "uk", name: "United Kingdom"},
+    {code: "ua", name: "Ukraine"}
+
+  ];
+
+  public tempUnitsList: any = [
+    {code: 'c', name: 'Celsius'},
+    {code: 'f', name: 'Fahrenheit'},
+    {code: 'k', name: 'Kelvin'}
+  ];
+  public tempUnit:string = this.tempUnitsList[0].code;
 
 
   constructor(public http: Http) {

@@ -3,12 +3,14 @@ import {Platform} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 
 import {HomePage} from '../pages/home/home';
+// import {Weather} from '../providers/weather';
 // import  {AddPage} from "../pages/add/add";
 
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  // providers: [Weather]
 })
 export class MyApp {
   rootPage = HomePage;
@@ -18,7 +20,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-      Splashscreen.hide();
+      // Splashscreen.hide();
     });
   }
 }

@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Add weather</ion-title>
     <ion-buttons right>
       <button ion-button (click)="dismiss()" color="royal" icon-only>
@@ -27,8 +27,11 @@
     <ion-item>
       <ion-label stacked>{{this.globalServices.lableNamesObj.country}}</ion-label>
       <ion-select [(ngModel)]="data.country">
-        <ion-option value="us">United States</ion-option>
-        <ion-option value="uk">United Kingdom</ion-option>
+        <ion-option *ngFor="let country of this.globalServices.countryList" value={{country.code}}>{{country.name}}</ion-option>
+
+        <!--<ion-option value="us">United States</ion-option>-->
+        <!--<ion-option value="uk">United Kingdom</ion-option>-->
+        <!--<ion-option value="ua">Ukraine</ion-option>-->
       </ion-select>
 
     </ion-item>

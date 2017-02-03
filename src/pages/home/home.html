@@ -1,10 +1,11 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <!--<ion-buttons start>-->
       <!--<button royal (click)="addWeather()">Add</button>-->
     <!--</ion-buttons>-->
 
-    <ion-title>Buttons In Components</ion-title>
+    <ion-title>
+      <img src="img/logo.png" class="logo-title"></ion-title>
     <ion-buttons left>
       <button ion-button color="royal" solid (click)="addWeather()">Add</button>
     </ion-buttons>
@@ -13,5 +14,42 @@
 </ion-header>
 
 <ion-content padding>
-  {{this.globalServices.weatherList | json}}
+  <!--{{this.globalServices.weatherList | json}}-->
+  <ion-list>
+    <!--<ion-item *ngIf="localWeather" (click)="viewForecast(localWeather)">-->
+      <!--<ion-thumbnail item-left>-->
+        <!--<img src="http://openweathermap.org/img/w/{{localWeather.weather[0].icon}}.png"  alt="">-->
+      <!--</ion-thumbnail>-->
+      <!--<h2>{{localWeather.main.temp | temperature:this.globalServices.tempUnit}}</h2>-->
+      <!--<h3>{{localWeather.name}}</h3>-->
+      <!--<p>Low: {{localWeather.main.temp_min | temperature:this.globalServices.tempUnit}} High: {{localWeather.main.temp_max | temperature:this.globalServices.tempUnit}}</p>-->
+      <!--<ion-icon name="arrow-forward" item-right=""></ion-icon>-->
+    <!--</ion-item>-->
+
+    <weather
+    [weather] = "localWeather"
+    (viewMore) = "viewForecast($event)">
+
+    </weather>
+
+    <weather
+      *ngFor="let weatherItem of this.globalServices.weatherList"
+      [weather] = "weatherItem"
+      (viewMore) = "viewForecast($event)">
+
+    </weather>
+
+    <!--<ion-item *ngFor="let weatherItem of this.globalServices.weatherList" (click)="viewForecast(weatherItem)">-->
+      <!--<ion-thumbnail item-left>-->
+        <!--<img src="http://openweathermap.org/img/w/{{weatherItem.weather[0].icon}}.png"  alt="">-->
+      <!--</ion-thumbnail>-->
+      <!--<h2>{{weatherItem.main.temp | temperature:this.globalServices.tempUnit}}</h2>-->
+      <!--<h3>{{weatherItem.name}}</h3>-->
+      <!--<p>Low: {{weatherItem.main.temp_min | temperature:this.globalServices.tempUnit}} High: {{weatherItem.main.temp_max | temperature:this.globalServices.tempUnit}}</p>-->
+<!--<ion-icon name="arrow-forward" item-right=""></ion-icon>-->
+    <!--</ion-item>-->
+  </ion-list>
+
+
 </ion-content>
+
