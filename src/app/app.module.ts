@@ -10,6 +10,13 @@ import {ForecastPage} from '../pages/forecast/forecast';
 import {Weather} from '../providers/weather';
 import {WeatherComponent} from '../components/weather/weather';
 import { Storage } from '@ionic/storage';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'e4dfae8f'
+  }
+};
 
 @NgModule({
   declarations: [
@@ -22,7 +29,8 @@ import { Storage } from '@ionic/storage';
 
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
